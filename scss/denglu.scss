@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#zhuce {
+    width: 960px;
+    height: 100%;
+    // background: red;
+    margin: auto;
+
+    .logo {
+        width: 960px;
+        height: 86px;
+        // background: yellow;
+
+        .logo-home {
+            display: block;
+            float: left;
+            width: 360px;
+            height: 86px;
+            background: url("https://f5.jmstatic.com/static_passport/dist/v1.0.137928/images/logo_new_v1.jpg") no-repeat top left;
+        }
+
+
+        .logo-box {
+            width: 462px;
+            height: 31px;
+            // background: #ed145b;
+            margin-top: 35px;
+            float: right;
+
+            .logo-zhen {
+                color: #ed145b;
+                text-decoration: none;
+                background: url(../img/header_corn_new_v2.png) no-repeat top center transparent;
+                width: 110px;
+                height: 31px;
+                overflow: hidden;
+                margin-right: 24px;
+                float: right;
+                background-position: 0 0;
+            }
+
+            .logo-mei {
+                background-image: url(../img/gild.png);
+                width: 170px;
+                height: 31px;
+                overflow: hidden;
+                margin-right: 24px;
+                float: right;
+
+            }
+
+            .logo-shan {
+                color: #ed145b;
+                text-decoration: none;
+                background: url(../img/header_corn_new_v2.png) no-repeat top center transparent;
+                width: 110px;
+                height: 31px;
+                overflow: hidden;
+                margin-right: 24px;
+                float: right;
+                background-position: 0 -64px;
+
+            }
+        }
+    }
+
+    .zhuce-input {
+        width: 960px;
+        height: 500px;
+        background: red;
+        background: url(../img/signPic.jpg) no-repeat 0 67px;
+
+        .yhzc {
+            width: 358px;
+            height: 380px;
+            border: 1px solid #f7f7f7;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.075);
+            float: right;
+            margin-top: 62px;
+            padding: 20px;
+
+            .kuang-header {
+                width: 100%;
+                height: 20px;
+                padding-top: 20px;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #e31256;
+                    float: left;
+
+                }
+
+                p {
+                    float: right;
+                    color: #969696;
+                    font-size: 11px;
+
+                    a {
+                        color: #ed145b;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+
+                }
+
+            }
+
+            input {
+                box-shadow: none;
+                border: 1px solid #CFCFCF;
+                background-color: #fff;
+                vertical-align: middle;
+                padding: 10px 8px;
+                line-height: 1.5;
+                font-size: 14px;
+                width: 300px;
+                border-radius: 5px;
+                margin-left: 20px;
+                margin-top: 30px;
+
+            }
+
+            .qitian {
+                width: 300px;
+                height: 30px;
+                display: flex;
+                font-size: 12px;
+                margin: auto;
+                margin-top: 20px;
+                color: #969696;
+
+                .gouxuan {
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 10px;
+                    margin-top:0px;
+                    float: left;
+                }
+            }
+
+
+            .xieyi {
+                display: block;
+                width: 300px;
+                height: 40px;
+                background: #ed145b;
+                margin: auto;
+                margin-top: 20px;
+                color: white;
+                // word-spacing: 10px;
+             
+
+
+            }
+
+        }
+
+    }
+
+    .zhuce-bottom {
+
+        width: 960px;
+        margin: auto;
+        text-align: center;
+        font-size: 12px;
+
+    }
+
+    .bottom {
+        width: 700px;
+        height: 80px;
+        // background: red;
+        margin: auto;
+
+        div {
+            width: 126px;
+            height: 50px;
+            margin: 18px 14px 0 0;
+            float: left;
+
+
+        }
+
+        .p1 {
+            background: url(../img/header_corn_new_v2.png) no-repeat 0 -168px;
+
+        }
+
+        .p2 {
+            background: url(../img/header_corn_new_v2.png) no-repeat 0 -219px;
+
+        }
+
+        .p3 {
+            background: url(../img/header_corn_new_v2.png) no-repeat 0 -270px;
+
+        }
+
+        .p4 {
+            background: url(../img/header_corn_new_v2.png) no-repeat 0 -321px;
+
+        }
+
+        .p5 {
+            background: url(../img/header_corn_new_v2.png) no-repeat 0 -372px;
+
+        }
+
+
+    }
+
+}
