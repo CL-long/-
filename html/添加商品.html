@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery1.10.3.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <input type="text"  placeholder="name">
+    <input type="text" placeholder="价格">
+    <input type="text" placeholder="描述">
+    <input type="text" placeholder="图片">
+
+    <button id="btn"></button>
+    <script>
+
+
+//添加商品
+        function goods() {
+            let btn = document.querySelector('#btn');
+            btn.onclick = function () {
+                let oInput = document.querySelectorAll(" input");
+                let pname = oInput[0].value;
+                let pprice = oInput[1].value;
+                let pdesc = oInput[2].value;
+                let pimg = oInput[3].value;
+                let uid = localStorage.getItem('u-id');
+                let token = localStorage.getItem("u-token");
+                let url = 'http://jx.xuzhixiang.top/ap/api/goods/goods-add.php';
+
+                let params = { pdesc, pimg, pname, pprice, uid };
+                axios.get(url, { params }).then(res => {
+                    if (res.data.code === 1) {
+                        alert(data);
+                        location.reload();
+                    } else (
+                        alert(res.data.msg)
+                    )
+                })
+            }
+
+        }
+        goods()
+
+
+        //删除商品
+
+// function deleteProduct() {
+//             //         接口地址：    http://jx.xuzhixiang.top/ap/api/goods/goods-delete.php
+//             //  接口请求方式：get
+//             //  接口参数：
+
+//             //         pid（必选）商品的id
+//             //         uid（必选）用户的id
+//             //         token（必选）登陆时候返回的token
+//             let  input=document.querySelector("input");
+//             let shuzi=input.value;
+//             let deleteBtns = document.querySelectorAll('#btn');
+//             for (let i = 0; i < deleteBtns.length; i++) {
+//                 deleteBtns[i].onclick = function() {
+//                     //调用删除接口u-
+//                     let uid = localStorage.getItem('u-id')
+//                     console.log(uid);
+//                     let token = localStorage.getItem('u-token')
+//                         // pid  按钮上 属性里面
+//                     let pid = this.getAttribute('data-id')
+
+//                     let url = 'http://jx.xuzhixiang.top/ap/api/goods/goods-delete.php?pid=398764'
+//                     axios.get(url, {
+//                         params: {
+//                             pid,
+//                             uid,
+//                             token,
+//                         }
+//                     }).then(res => {
+//                         console.log(res.data);
+//                         // 刷新页面 ， loadData  ，this.父元素 。remove（）
+//                         this.parentNode.remove()
+//                     })
+//                 }
+//             }
+//         }
+
+//         deleteProduct()
+
+    </script>
+
+
+
+
+</body>
+
+</html>
