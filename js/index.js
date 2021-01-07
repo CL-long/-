@@ -66,17 +66,63 @@
     dh_right(".p7", ".a7");
     
   
-//商品划过效果
-$(".sp-1").mousemove(function (){
-    $(".cat-che").css({display:"block"})
-    $(".text").css({display:"block"})
-    $(".sp-1").css({opacity:"0.7"})
-})
-$(".sp-1").mouseout(function (){
-    $(".cat-che").css({display:"none"})
-    $(".text").css({display:"none"})
-    $(".sp-1").css({opacity:"1"})
-})
+// //商品划过效果
+// $(".sp-1").mousemove(function (){
+//     $(".cat-che").css({display:"block"})
+//     $(".text").css({display:"block"})
+//     $(".sp-1").css({opacity:"0.7"})
+// })
+// $(".sp-1").mouseout(function (){
+//     $(".cat-che").css({display:"none"})
+//     $(".text").css({display:"none"})
+//     $(".sp-1").css({opacity:"1"})
+// })
+let flag = true;
+$(window).scroll(function () {
+    if (flag) {
+        let st = $(this).scrollTop();
+        if (st > 526) {
+            $("#floorNav").fadeIn();
+            $("#floorNav li").eq(1).addClass("hover").siblings().removeClass("hover");
+            if (st > $(".daiyan_wrap").offset().top) {
+                $("#floorNav li").eq(2).addClass("hover").siblings().removeClass("hover");
+            }
+        } else {
+            $("#floorNav").fadeOut();
+        }
+    }
+});
 
+$("#floorNav li").eq(1).click(function () {
+    flag = false;
+    $("body,html").stop().animate({
+        "scrollTop": 526
+    }, 800, function () {
+        flag = true;
+    });
+    $(this).addClass("hover").siblings().removeClass("hover");
+});
+
+$("#floorNav li").eq(2).click(function () {
+    flag = false;
+
+    $("body,html").stop().animate({
+        "scrollTop": $(".daiyan_wrap").offset().top
+    }, 800, function () {
+        flag = true;
+    });
+    $(this).addClass("hover").siblings().removeClass("hover");
+});
+
+$("#floorNav li:last").click(function () {
+    flag = false;
+    $("body,html").stop().animate({
+        "scrollTop": 0
+    }, 800, function () {
+        flag = true;
+    });
+
+    $("#floorNav").fadeOut();
+});
 
    

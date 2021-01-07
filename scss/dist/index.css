@@ -227,49 +227,71 @@ body {
   margin-right: 6px;
 }
 
-#left-nav {
-  position: absolute;
+#floorNav {
+  display: none;
   position: fixed;
-  z-index: 10;
-  left: 50px;
+  top: 100px;
+  left: 140px;
+  width: 32px;
 }
-#left-nav li {
+#floorNav li {
+  cursor: pointer;
+  position: relative;
   width: 60px;
-  height: 62px;
-  background: #ed145B;
-  list-style: none;
-}
-#left-nav li p {
+  height: 60px;
+  border-bottom: 1px solid #cecece;
   text-align: center;
-  line-height: 30px;
+  line-height: 26px;
+  font-size: 14px;
+  background: #ff5f97;
+  color: #fff;
 }
-#left-nav li .bikan {
-  text-decoration: none;
+#floorNav li:nth-of-type(1) {
+  padding-top: 5px;
+}
+#floorNav li:nth-of-type(2) {
+  padding-top: 5px;
+}
+#floorNav li:nth-of-type(3) {
+  padding-top: 14px;
+}
+#floorNav li:nth-of-type(3) span {
+  padding-top: 14px;
+}
+#floorNav li:nth-of-type(4) {
+  padding-top: 5px;
+}
+#floorNav span {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 60px;
-  height: 22px;
-  padding-top: 40px;
-  text-align: center;
+  height: 60px;
+  line-height: 26px;
+  font-size: 14px;
+  background: #fff;
+  color: #848484;
+}
+#floorNav span:nth-of-type(1) {
+  padding-top: 5px;
+}
+
+#floorNav li:hover span,
+#floorNav li.hover span {
   display: block;
-  color: #8f8f8f;
-  background: url("http://a4.jmstatic.com/00ee6e4ce1a1f31f/pc_new.jpg") #fff no-repeat;
-  font-size: 12px;
 }
-#left-nav li .danpin {
-  font-size: 12px;
-  text-decoration: none;
-  width: 60px;
-  height: 22px;
-  padding-top: 40px;
-  text-align: center;
-  display: block;
-  color: #8f8f8f;
-  background: url("http://a4.jmstatic.com/00ee6e4ce1a1f31f/pc_new.jpg") #fe6397 no-repeat;
+
+body:hover {
+  cursor: url(images/dog.ico), auto;
 }
 
 #right-nav {
   display: flex;
   flex-direction: column;
   position: absolute;
+  position: fixed;
+  z-index: 10;
   height: 100%;
   width: 40px;
   background: #444851;

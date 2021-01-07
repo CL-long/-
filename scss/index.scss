@@ -292,51 +292,62 @@ body {
 }
 
 //左边侧边栏
-#left-nav {
-    position: absolute;
-    position: fixed;
-    z-index: 10;
-    left: 50px;
-
-
-    // top: ;
-    li {
-        width: 60px;
-        height: 62px;
-        background: #ed145B;
-        list-style: none;
-
-        p {
-            text-align: center;
-            line-height: 30px;
-        }
-
-        .bikan {
-            text-decoration: none;
-            width: 60px;
-            height: 22px;
-            padding-top: 40px;
-            text-align: center;
-            display: block;
-            color: #8f8f8f;
-            background: url("http://a4.jmstatic.com/00ee6e4ce1a1f31f/pc_new.jpg") #fff no-repeat;
-            font-size: 12px;
-        }
-
-        .danpin {
-            font-size: 12px;
-            text-decoration: none;
-            width: 60px;
-            height: 22px;
-            padding-top: 40px;
-            text-align: center;
-            display: block;
-            color: #8f8f8f;
-            background: url("http://a4.jmstatic.com/00ee6e4ce1a1f31f/pc_new.jpg") #fe6397 no-repeat;
-
-        }
+#floorNav {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 140px;
+  width: 32px;
+  li {
+    cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-bottom: 1px solid #cecece;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    background: #ff5f97;
+    color: #fff;
+    &:nth-of-type(1) {
+      padding-top: 5px;
     }
+    &:nth-of-type(2) {
+      padding-top: 5px;
+    }
+    &:nth-of-type(3) {
+      padding-top: 14px;
+      span {
+        padding-top: 14px;
+      }
+    }
+    &:nth-of-type(4) {
+      padding-top: 5px;
+    }
+  }
+  span {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 26px;
+    font-size: 14px;
+    background: #fff;
+    color: #848484;
+    &:nth-of-type(1) {
+      padding-top: 5px;
+    }
+  }
+}
 
+#floorNav li:hover span,
+#floorNav li.hover span {
+  display: block;
+}
+body:hover {
+  cursor: url(images/dog.ico), auto;
 }
 
 //右边栏
@@ -344,7 +355,9 @@ body {
     display:flex;
     flex-direction: column;
     position: absolute;
-    // z-index: 10;
+    position: fixed;
+    z-index: 10;
+
     height: 100%;
     width: 40px;
     background: #444851;
